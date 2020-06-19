@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LoginForm</title>
+	<link rel="stylesheet" href="../css/LoginForm_Style.css">
+	<!-- <script src="../js/login.js"></script> -->
+	<style type="text/css">
+		/*body{
+			background: blue;
+		}*/
+	</style>
+</head>
+<body>
+	<div id="header1">
+			<table style="width: 100%;text-align: center;">
+				<tr>
+					<td style="width: 25%;"><a href="index.html">首页</a></td>
+					<td style="width: 25%;"><a href="魔方.html">魔方</a></td>
+					<td style="width: 25%;"><a href="LoginForm.html">作品展示1</a></td>
+					<td style="width: 25%;"><a href="综合案例.html">作品展示2</a></td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<p style="color: white;"><b>此页面为信息系统分析与设计课程的课程设计系统登陆界面，此处只为展示，不可用！</b></p>
+					</td>
+				</tr>
+			</table>
+		</div>
+	<div id="container">
+		<div id="header">
+			毕业论文管理系统
+		</div>
+		<div id="main">
+			<div id="login_form">
+				<form action="">
+					<table id="table2">
+						<tr>
+							<td>用户登录</td>
+						</tr>
+					</table>
+					<table id="table1">
+						<tr>
+							<td class="td1">账户</td>
+							<td class="td2">
+								<input type="text" name="loginFormNumber" width="20" height="25" id="username" value="">
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">密码</td>
+							<td class="td2">
+								<input type="password" name="loginFormPassword" width="20" height="25" id="password" value="">
+							</td>
+						</tr>
+						<tr>
+							<td class="td3">用户类型</td>
+							<td class="td4" id="logintype">
+								<input type="radio" name="LoginType" value="student">学生
+								<input type="radio" name="LoginType" value="teacher">教职工
+								<input type="radio" name="LoginType" value="admin">管理员
+							</td>
+						</tr>
+					</table>
+					<table id="table3">
+						<tr>
+							<td class="td5">
+								<input type="submit" name="loginFormSubmit" value="登  录" onclick="checkLogin()">
+							</td>
+							<td class="td5">
+								<input type="reset" name="loginFormReset" value="重  置">
+							</td>
+						</tr>
+						<tr>
+							<td class="td5">
+								<a href="#">忘记密码?</a>
+							</td>
+							<!--<td class="td5">
+								<a href="RegisterForm.html">用户注册</a>
+							</td>-->
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	
+
+function checkLogin(){
+    var name = document.getElementById("username").value;
+    var pass = document.getElementById("password").value;
+    var type = $(name="LoginType");
+    alert(typeof(type));
+    for(var i =0;i<type.length;i++){
+    	alert(type[i].value);
+    }
+    //if((name==null || name=="") || (pass==null || pass=="")||(type==null || type=="")){
+       // alert("用户名或密码不能为空且必须选择用户类型！！");
+    //}
+}
+
+//判断非空
+//             var test_id = "123";
+//             var test_ps = "123";
+//             var type_value;
+//             for(var i=0;i<type.length;i++){
+//             	if(type[i].checked)
+//             		type_value = type[i].value;
+//             }
+//             // alert(name.type());
+//             // alert(type_value);
+//             if((name==null || name=="") || (pass==null || pass=="")){
+//                 alert("用户名或密码不能为空！！");
+//             }
+//             else{
+//                 if(name==test_id && pass==test_ps){
+//                     if(type_value == "student"){
+
+//                     	alert("学生登录成功！");
+//                     }else if (type_value == "teacher") {
+//                     	alert("教师登录成功！");
+//                     }else if (type_value == "admin") {
+//                     	alert("管理员登录成功！");
+//                     }
+// //这里写你页面跳转的语句
+//                      window.navigate("StudentForm.html");
+//                 }
+//                 else{
+//                     alert("用户名或密码错误！！");
+//                 }
+//             }
+        }
+
+</script>
+</html>
